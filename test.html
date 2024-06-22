@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // file: detectDevice.js
+
+// Function to check if the user agent is a computer
+function isComputer() {
+    const userAgent = navigator.userAgent;
+    // Regular expression for common desktop platforms
+    const desktopRegex = /(Windows NT|Macintosh|Linux x86_64|Linux i686)/;
+    return desktopRegex.test(userAgent);
+}
+
+// Function to handle non-computer access
+function handleNonComputerAccess() {
+    if (!isComputer()) {
+        // Alert the user
+        alert("Access is restricted to computer devices only.");
+
+        // Optional: Redirect to an error page
+        // window.location.href = "error.html";
+
+        // Optional: Hide the body content
+        document.body.innerHTML = "<h1>Access Denied</h1><p>This site is accessible only from a computer.</p>";
+    }
+}
+
+// Run the check on page load
+window.onload = handleNonComputerAccess;
+
+    </script>
+</body>
+</html>

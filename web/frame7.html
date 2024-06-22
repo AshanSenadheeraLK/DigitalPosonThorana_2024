@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>කෝඩින් වෙසක් කලාපය 2023</title>
+  <style>
+    body {
+      background-color: black;
+      left: 470px;
+      position: absolute;
+      max-width: 100% vw;
+    }
+    
+    .layer {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="layer" style="background-color:black;z-index: 1;">       
+    <img style="position: absolute; top: 115px; left: 120px; width: 600px; height: 600px;"
+         src="../assets/img/Frames/7.png" />
+    <img style="position: absolute; top: 50px; left: 50px; width: 720px; height: 710px;"
+         src="https://cdn.glitch.global/a65e489c-0622-426c-9bc2-5e7208dcabff/frameStyle2.gif?v=1683487847170" />
+  </div>
+    
+  <div class="layer" style="background-color: '#0f000'; z-index: 14;">
+    <a href="frame8.html" style="position: absolute; top: 610px; left: 360px; background-color: pink; border-radius: 10px; width: 100px; height: 30px; text-decoration: none; color: #000; display: flex; justify-content: center; align-items: center;">ඊළඟ කොටුවට</a>
+    <!-- Audio element with autoplay and controls -->
+    <audio id="myaudio" controls autoplay style="position: absolute; top: 720px; left: 260px;">
+      <!-- Specify the source of the audio file -->
+      <source src="../assets/audio/6.mp3" type="audio/mp3">
+      <!-- Provide fallback content in case the browser does not support the audio tag -->
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+    
+  <script>
+    // Function to redirect to frame8.html after 4 minutes and 38 seconds (278 seconds)
+    setTimeout(function() {
+      window.location.href = 'frame8.html';
+    }, 278000); // 278000 milliseconds = 4 minutes and 38 seconds
+  </script>
+    
+</body>
+</html>

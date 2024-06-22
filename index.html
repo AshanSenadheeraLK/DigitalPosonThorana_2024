@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ඩිජිටල් පොසොන් තොරණ - 2024 | එච්.එම්.අශාන් ජනිත් දිල්ෂාන් සේනාධීර.</title>
+   <style>
+      body {
+         background-color: black;
+         color: white;
+         font-family: Arial, sans-serif;
+         margin: 0;
+         padding: 0;
+      }
+
+      #main {
+         position: relative;
+         height: 100vh;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+      }
+
+      .light1, .light2 {
+         width: 60px;
+         height: 60px;
+         margin: 10px;
+         border-radius: 50%;
+         opacity: 0.3;
+      }
+
+      .light1 {
+         display: inline-block;
+      }
+
+      .light2 {
+         position: absolute;
+         bottom: 85px;
+         right: 0;
+      }
+
+      /* Colors for the first set of circles */
+      #light1 { background-color: blue; }
+      #light2 { background-color: yellow; }
+      #light3 { background-color: red; }
+      #light4 { background-color: white; }
+      #light5 { background-color: orange; }
+
+      /* Colors for the second set of circles */
+      #light10 { background-color: blue; }
+      #light20 { background-color: yellow; }
+      #light30 { background-color: red; }
+      #light40 { background-color: white; }
+      #light50 { background-color: orange; }
+
+      /* Heading styles */
+      .main-container {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         text-align: center;
+      }
+
+      h1 {
+         font-size: 24px;
+         line-height: 1.5;
+         padding-left: 35px;
+         margin: 0;
+      }
+   </style>
+</head>
+<body>
+   <main id="main">
+      <div id="light-box">
+         <div class="light1" id="light1"></div>
+         <div class="light1" id="light2"></div>
+         <div class="light1" id="light3"></div>
+         <div class="light1" id="light4"></div>
+         <div class="light1" id="light5"></div>
+     </div>      
+     <div id="light-box-two">
+         <div class="light2" id="light10"></div>
+         <div class="light2" id="light20"></div>
+         <div class="light2" id="light30"></div>
+         <div class="light2" id="light40"></div>
+         <div class="light2" id="light50"></div>
+     </div>
+      <div class="main-container">
+         <h1 style="background-color: rgba(255, 255, 255, 0.174); width: 100vw; height: 50%vh; padding-top: 10px; font-size: 72px;">ඩිජිටල් පොසොන් තොරණ - 2024<br /><br />නිර්මාණය:- එච්.එම්.අශාන් ජනිත් දිල්ෂාන් සේනාධීර.</h1>
+      </div>
+   </main>   
+
+   <script>
+      // JavaScript code can go here
+      // Example: Redirect after 5 seconds
+      /*setTimeout(function() {
+         window.location.href = "/web";
+      }, 5000);*/
+
+      document.addEventListener('DOMContentLoaded', () => {
+            const lights = document.querySelectorAll('.light1', '.light2');
+            let currentIndex = 0;
+
+            function lightLoop() {
+                lights.forEach((light, index) => {
+                    light.style.opacity = (index === currentIndex) ? '1' : '0.3';
+                });
+
+                currentIndex = (currentIndex + 1) % lights.length;
+                setTimeout(lightLoop, 500); // Change the light every 500ms
+            }
+
+            lightLoop();
+        });
+   </script>
+</body>
+</html>
